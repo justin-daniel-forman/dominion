@@ -1,12 +1,13 @@
 # class BaseCard
+import dominion
 
 class Base_Card:
-    def __init__():
-        print("Hello World!")
+    def __init__(self,name):
+        self._name = name
         pass
 
-    def _say_name():
-        return "card"
+    def say_name(self):
+        return self._name
 
 
 

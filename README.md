@@ -1,15 +1,7 @@
-# Dominion (back-end model)
+# Dominion
 
-## Getting Started
+## Frontend
+contained within the ./frontend directory
 
-1. Install local package "dominion"
-
-'''
-pip install -e .
-'''
-
-2. Setup local package w/ dependencies (NO DEPENDENCIES YET)
-
-'''
-python setup.py develop
-'''
+## Backend
+contained within the ./backend directory

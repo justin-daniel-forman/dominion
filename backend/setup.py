@@ -9,6 +9,7 @@ setup(name='dominion',
       license='CMU',
       packages=['dominion'],
       install_requires=[
-          #Add dependencies here
+        'flask',
+        'python-dotenv'
       ],
       zip_safe=False)

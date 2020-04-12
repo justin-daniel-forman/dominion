@@ -1,0 +1,18 @@
+#game {
+  margin: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#game-board {
+  flex: 80%;
+  border: 1px solid;
+  margin: 2vh 1vw;
+}
+
+#control-panel {
+  flex: 20%;
+  border: 1px solid;
+  margin: 2vh 1vw;
+}

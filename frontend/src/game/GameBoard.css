@@ -1,0 +1,23 @@
+#game-board-header {
+    margin: 10px;
+    text-align: center;
+}
+
+#game-board-button {
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    border: 2px solid red;
+    border-radius: 6px;
+    background-color: white;
+    color: red;
+}
+
+#game-board-button:hover {
+    background-color: red;
+    color: white;
+}
+
+#game-time {
+    margin: 10px;
+}

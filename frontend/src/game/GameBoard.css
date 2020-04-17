@@ -1,23 +1,61 @@
-#game-board-header {
-    margin: 10px;
-    text-align: center;
+#game-board {
+    height: 100%;
 }
 
-#game-board-button {
-    margin: 10px;
-    width: 80px;
-    height: 30px;
-    border: 2px solid red;
-    border-radius: 6px;
-    background-color: white;
-    color: red;
+#game-board-grid {
+    border: 1px solid;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    /* grid-auto-rows: minmax(100px, auto); */
 }
 
-#game-board-button:hover {
-    background-color: red;
-    color: white;
+#supply-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 1; 
+    grid-column-end: 13; 
+    grid-row-start: 3; 
+    grid-row-end: 8;
 }
-
-#game-time {
-    margin: 10px;
+#resource-tracker-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 8; 
+    grid-row-end: 10;
+}
+#play-area-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 5; 
+    grid-column-end: 13; 
+    grid-row-start: 8; 
+    grid-row-end: 10;
+}
+#deck-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+    grid-row-start: 10; 
+    grid-row-end: 13;
+}
+#discard-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 3; 
+    grid-column-end: 5; 
+    grid-row-start: 10; 
+    grid-row-end: 13;
+}
+#hand-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 5; 
+    grid-column-end: 13; 
+    grid-row-start: 10; 
+    grid-row-end: 13;
 }

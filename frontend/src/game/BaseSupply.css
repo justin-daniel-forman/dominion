@@ -7,3 +7,8 @@
     column-gap: 5px;
     row-gap: 5px;
 }
+
+#base-supply > .card:hover {
+    z-index: 1;
+    height: 150%;
+}

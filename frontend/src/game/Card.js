@@ -21,13 +21,13 @@ class Card extends React.Component {
         if (this.props.faceUp)
             return (
                 <div className="card">
-                    <img src={ace_spades} />
+                    <img src={ace_spades} alt="Ace of Spades" />
                 </div>
             );
         else
             return (
                 <div className="card">
-                    <img src={face_down_card} />
+                    <img src={face_down_card} alt="Face down card" />
                 </div>
             );
     }

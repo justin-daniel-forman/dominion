@@ -11,10 +11,18 @@
     /* grid-auto-rows: minmax(100px, auto); */
 }
 
-#supply-container {
+#base-supply-container {
     margin: 5px;
     border: 1px solid;
     grid-column-start: 1; 
+    grid-column-end: 6; 
+    grid-row-start: 3; 
+    grid-row-end: 8;
+}
+#kingdom-supply-container {
+    margin: 5px;
+    border: 1px solid;
+    grid-column-start: 6; 
     grid-column-end: 13; 
     grid-row-start: 3; 
     grid-row-end: 8;

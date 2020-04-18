@@ -7,6 +7,9 @@ import './GameBoard.css';
 import Hand from './Hand';
 import Discard from './Discard';
 import Deck from './Deck';
+import ResourceTracker from './ResourceTracker';
+import BaseSupply from './BaseSupply';
+import KingdomSupply from './KingdomSupply';
 
 class GameBoard extends React.Component {
 
@@ -22,12 +25,20 @@ class GameBoard extends React.Component {
             <div id="game-board">
 
                 <div id="game-board-grid">
-                    <div id="supply-container">
-                        <p className="preview-text">Supply</p>
+
+                    <div id="base-supply-container">
+                        <p className="preview-text">Base Supply</p>
+                        <BaseSupply />
+                    </div>
+
+                    <div id="kingdom-supply-container">
+                        <p className="preview-text">Kingdom Supply</p>
+                        <KingdomSupply />
                     </div>
 
                     <div id="resource-tracker-container">
                         <p className="preview-text">Resource Tracker</p>
+                        <ResourceTracker />
                     </div>
 
                     <div id="play-area-container">

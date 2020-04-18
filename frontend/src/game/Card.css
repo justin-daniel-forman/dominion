@@ -1,5 +1,4 @@
 .card {
-    /* border: 1px solid; */
     height: 100%;
     text-align: center;
 
@@ -8,5 +7,4 @@
 .card img {
     max-height:100%;
     max-width: 100%;
-    object-fit: contain;
 }

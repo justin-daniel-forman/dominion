@@ -1,4 +1,5 @@
 import React from '../../node_modules/react';
+import ReactDOM from '../../node_modules/react-dom';
 
 // import style sheets
 import './Hand.css';
@@ -15,8 +16,15 @@ class Hand extends React.Component {
             cards: 3,
         };
 
+        this.handRef = React.createRef();
+
         this.handleAddCardClick = this.handleAddCardClick.bind(this);
         this.handleRemoveCardClick = this.handleRemoveCardClick.bind(this);
+    }
+
+    componentDidMount() {
+        this.handWidth = this.handRef.current.clientWidth;
+        console.log(this.handWidth);
     }
 
     handleAddCardClick() {
@@ -31,11 +39,19 @@ class Hand extends React.Component {
 
         const cardComponents = [];
 
+        // only use 80% of handWidth as we want left edge of last card to not exceed hand width
+        const leftStep = (this.handWidth * 0.8) / (this.state.cards + 1)
+
         for (var i = 0; i < this.state.cards; i++) {
-            cardComponents.push(<Card faceUp={true} />)
+            var leftIndent = (i + 1) * leftStep;
+            var handCardContainerStyle = {
+                left: leftIndent.toString() + 'px',
+            };
+            cardComponents.push(
+                <div className="hand-card-container" style={handCardContainerStyle}>
+                    <Card faceUp={true} />
+                </div>)
         }
-
-
 
         const handStyle = {
             display: 'grid',
@@ -61,7 +77,7 @@ class Hand extends React.Component {
                 <button onClick={this.handleAddCardClick} style={addButtonStyle}>Add Card</button>
                 <button onClick={this.handleRemoveCardClick} style={removeButtonStyle}>Remove Card</button>
 
-                <div id="hand" style={handStyle}>
+                <div id="hand" ref={this.handRef} style={handStyle}>
                     {cardComponents}
                 </div >
             </div>
